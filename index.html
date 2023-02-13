@@ -38,7 +38,29 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	//YOUR JAVASCRIPT GOES HERE
+	var anxiety_count = 0; //This establishes the variable of allergy. Everytime the user clicks the button corresponding to allergy, this count increases//
+        var panic_count = 0;
+
+
+        function anxietyAdd(){ //The actual addition an allergy count is established by this function//
+            anxiety_count = anxiety_count + 1;
+
+        }
+
+        function panicAdd(){ //Addition of a cold button count is established here//
+            panic_count = panic_count + 1;
+        }
+	
+	
+	function results(){
+	var anxietyPercent = (anxiety_count)/(4)*100 //This calculates the probability of having allergies by taking the total allergy count, dividing by
+							//the total number of 4 questions, and multiplying by 100 for a percentage.//
+	var panicPercent = (panic_count)/(4)*100 //The same arithmetic was applied here, but for the cold count//
+	var resultText = document.getElementById("results"); //This line replaces the "results" text in the final page with the probabilities calculated//
+	resultText.innerHTML = "Probability it is anxiety =" + anxietyPercent + "<br> Probability it is a panic =" + panicPercent; 
+	//The line above actually spells out what is being replaced, including the calculations made by the functions//
+		
+	}
 
 </script>	
 
