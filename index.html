@@ -111,12 +111,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="page" id="one">
 		<div id="header" class="w3-container w3-light-blue">
 		<h1>Question 1</h1> <!--This adds the text inside the <h1> in the header-->
+			
+		</div>
 		
-		<div id="content" class="w3-container">
+	<div id="content" class="w3-container">
         	<p>Was your episode's onset sudden, or did it build up over time?</p> <!--This is the text within the body paragraph-->
-		<a href="#two" onclick="anxietyAdd();" class="w3-button w3-teal w3-round">Sudden</a> <!--This line does the same thing as above, but also has another function.
+		<a href="#two" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Sudden</a> <!--This line does the same thing as above, but also has another function.
 		The "onclick" tells the function specified in the <script> to occur. In this case, If you click "Yes", it adds a count to the allergy count.-->
-		<a href="#two" onclick="panicAdd();" class="w3-button w3-teal w3-round">Gradual</a> <!--This button adds a count to cold-->
+		<a href="#two" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Gradual</a> <!--This button adds a count to cold-->
     		
 		</div>
 	</div>
@@ -129,8 +131,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 	<div id="content" class="w3-container">
 		<p>Were your symptoms intense (ex: sense of impeding doom, extreme difficulty breathing)? Or did you feel more restless with increased heart rate?</p> <!--This is the text within the body paragraph-->
-		<a href="#three" onclick="panicAdd();" class="w3-button w3-pink w3-round">Intense</a> <!--This button adds a count to cold.-->
-		<a href="#three" onclick="anxietyAdd();" class="w3-button w3-pink w3-round">Milder</a> <!--This button adds a count to allergy-->
+		<a href="#three" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Intense</a> <!--This button adds a count to cold.-->
+		<a href="#three" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Milder</a> <!--This button adds a count to allergy-->
 		
 		</div><!--I added the second question and it worked. I am now going to begin adding question three in the same format it is shown above.-->
 	
