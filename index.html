@@ -20,8 +20,7 @@ Brief Description of Goal of Code:
 To diagnose whether one is experiencing a panic or anxiety attack.
  
 Known Issues:
-blah, blah, blah, blah
-Ignore this error message if you see it using the javaScript console: Error with Permissions-Policy header: Origin trial controlled feature not enabled: 'interest-cohort'.
+These questions are not extensive and detailed enough to truly address the root cause of these mental health episodes. You cannot use the back button, or else the counts are off.
 
 References:
 https://www.w3schools.com/w3css/default.asp
@@ -38,24 +37,24 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	var anxiety_count = 0; //This establishes the variable of allergy. Everytime the user clicks the button corresponding to allergy, this count increases//
-        var panic_count = 0;
+	var anxiety_count = 0; //This establishes the variable of anxiety. Everytime the user clicks the button corresponding to anxiety, this count increases//
+        var panic_count = 0; //This established the variable of panic. Like the anxiety, everytime the button corresponding to panic is clicked, this count increases.
 
 
-        function anxietyAdd(){ //The actual addition an allergy count is established by this function//
+        function anxietyAdd(){ //The actual addition an anxiety count is established by this function//
             anxiety_count = anxiety_count + 1;
 
         }
 
-        function panicAdd(){ //Addition of a cold button count is established here//
+        function panicAdd(){ //Addition of a panic button count is established here//
             panic_count = panic_count + 1;
         }
 	
 	
 	function results(){
-	var anxietyPercent = (anxiety_count)/(4)*100 //This calculates the probability of having allergies by taking the total allergy count, dividing by
+	var anxietyPercent = (anxiety_count)/(4)*100 //This calculates the probability of having anxiety by taking the total anxiety count, dividing by
 							//the total number of 4 questions, and multiplying by 100 for a percentage.//
-	var panicPercent = (panic_count)/(4)*100 //The same arithmetic was applied here, but for the cold count//
+	var panicPercent = (panic_count)/(4)*100 //The same arithmetic was applied here, but for the panic count//
 	var resultText = document.getElementById("results"); //This line replaces the "results" text in the final page with the probabilities calculated//
 	resultText.innerHTML = "Probability it is anxiety =" + anxietyPercent + "<br> Probability it is a panic =" + panicPercent; 
 	//The line above actually spells out what is being replaced, including the calculations made by the functions//
@@ -65,7 +64,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </script>	
 
 
-<!-- THIS STYLE CODE HELPS MAKE YOUR APP LOOK GOOD. PROBABLY DONT MESS WITH IT -->
+<!--The <style> section below establishes the appearance of the site through measurements and color-->
 <style>	
 .body {
      margin: 0em;
@@ -96,7 +95,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <body>
 	
-	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
 	<div id="header" class="w3-container w3-light-blue"> <!--This section puts text in the upper section of the page-->
 		<h1>Panic or Anxiety Attack?</h1> <!--This section contains the actual text within the upper part of the page-->
 
@@ -113,14 +111,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 		
 		
-		<h2>panic or anxiety?</h2>
-		<img src="https://images.prismic.io/cerebral/42857718-d8da-4e17-8a20-b8d1fdd31158_Panic%20Attacks.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&w=3420&h=1897" alt="PanicOrAnxiety" width="500" height="333">
-
+		<h2>panic or anxiety?</h2> <!--This is the label above the image on the first page-->
+		<img src="https://images.prismic.io/cerebral/42857718-d8da-4e17-8a20-b8d1fdd31158_Panic%20Attacks.png?ixlib=gatsbyFP&auto=compress%2Cformat&fit=max&w=3420&h=1897" alt="PanicOrAnxiety" width="500" height="333"> <!--The width and heigh adjusts the size of the image-->
+		<!--This function inserts an image on the first page with a link from the internet-->
 
 		
 	</div>
 
-	<div class="page" id="one">
+	<div class="page" id="one"> <!--This is the title of page one so the button on the previous page knows where to go next-->
 		<div id="header" class="w3-container w3-light-blue">
 		<h1>Question 1</h1> <!--This adds the text inside the <h1> in the header-->
 			
@@ -143,10 +141,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 	<div id="content" class="w3-container">
 		<p>Were your symptoms intense (ex: sense of impeding doom, extreme difficulty breathing)? Or did you feel more restless with increased heart rate?</p> <!--This is the text within the body paragraph-->
-		<a href="#three" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Intense</a> <!--This button adds a count to cold.-->
-		<a href="#three" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Milder</a> <!--This button adds a count to allergy-->
+		<a href="#three" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Intense</a> <!--This button adds a count to panic.-->
+		<a href="#three" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Milder</a> <!--This button adds a count to anxiety.-->
 		
-		</div><!--I added the second question and it worked. I am now going to begin adding question three in the same format it is shown above.-->
+		</div>
 	</div>
 
 	<div class="page" id="three">
@@ -157,11 +155,10 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 	<div id="content" class="w3-container">
         	<p>How long did your episode last?</p> <!--This is the text within the body paragraph-->
-		<a href="#four" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Around 15 minutes</a> <!--This line does the same thing as above, but also has another function.
-		The "onclick" tells the function specified in the <script> to occur. In this case, If you click "Yes", it adds a count to the allergy count.-->
-		<a href="#four" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">An increased period of time (hours, days, week+)</a> <!--This button adds a count to cold-->
+		<a href="#four" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Around 15 minutes</a> <!--This button adds a count to panic.-->
+		<a href="#four" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">An increased period of time (hours, days, week+)</a> <!--This button adds a count to anxiety.-->
 	
-		</div><!--I added the second question and it worked. I am now going to begin adding question three in the same format it is shown above.-->
+		</div>
 	</div>
 
 	<div class="page" id="four">
@@ -172,9 +169,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 	<div id="content" class="w3-container">
         	<p>Have you had difficulty sleeping recenty?</p> <!--This is the text within the body paragraph-->
-		<a href="#five" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Yes</a> <!--This line does the same thing as above, but also has another function.
-		The "onclick" tells the function specified in the <script> to occur. In this case, If you click "Yes", it adds a count to the allergy count.-->
-		<a href="#five" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">No</a> <!--This button adds a count to cold-->
+		<a href="#five" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Yes</a> <!--This button adds a count to anxiety.-->
+		<a href="#five" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">No</a> <!--This button adds a count to panic.-->
 		
 		</div>
 	
