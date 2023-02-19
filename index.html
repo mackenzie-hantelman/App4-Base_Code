@@ -97,9 +97,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		</div> <!--This division allows for a seperate section to be made beneath the colored header on the upper portion of the page-->
 	
 	<div id="content" class="w3-container"> <!--This section specifies the body part of the page-->
-		<p>Have you had an episode, but aren't sure what the cause of it was? Answer a few questions that may help you find out.</p> <!--This is the text within the body paragraph-->
+		<p>Have you had an episode, but aren't sure what may have caused it? Answer a few questions that may help you find out.</p> <!--This is the text within the body paragraph-->
 	
-		<a href="#one" class="w3-btn w3-light-blue w3-round"> Let's get started </a> <!--This line allows the user to move onto the next page by clicking the button. 
+		<a href="#one" class="w3-btn w3-light-blue w3-round"> Let's get started ㋛ </a> <!--This line allows the user to move onto the next page by clicking the button. 
 		The w3-"__" specifies the button appearance, from color to shape.-->
 	
 		<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
@@ -135,6 +135,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#three" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">Milder</a> <!--This button adds a count to allergy-->
 		
 		</div><!--I added the second question and it worked. I am now going to begin adding question three in the same format it is shown above.-->
+	</div>
+
+	<div class="page" id="three">
+		<div id="header" class="w3-container w3-light-blue">
+		<h1>Question 3</h1> <!--This adds the text inside the <h1> in the header-->
+			
+		</div>
+		
+	<div id="content" class="w3-container">
+        	<p>How long did your episode last?</p> <!--This is the text within the body paragraph-->
+		<a href="#four" onclick="panicAdd();" class="w3-button w3-light-blue w3-round">Around 15 minutes</a> <!--This line does the same thing as above, but also has another function.
+		The "onclick" tells the function specified in the <script> to occur. In this case, If you click "Yes", it adds a count to the allergy count.-->
+		<a href="#four" onclick="anxietyAdd();" class="w3-button w3-light-blue w3-round">An increased period of time (hours, days, week+)</a> <!--This button adds a count to cold-->
 	
 </body>
 </html>
